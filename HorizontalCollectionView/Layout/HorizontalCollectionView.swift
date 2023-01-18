@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HorizontalCollectionView: UICollectionViewLayout {
+class HorizontalCollectionViewLayout: UICollectionViewLayout {
     var numberOfColumn = 0
     var numberOfRow = 0
     var cellSize = CGSize(width: 0, height: 0)
@@ -43,9 +43,24 @@ class HorizontalCollectionView: UICollectionViewLayout {
             let attrribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             attrribute.frame = frame
             attributesCache.append(attrribute)
-            
+            debugPrint("frame \(index) \(frame.origin.x) \(frame.origin.y)")
             yOffset[column] = yOffset[column] + cellSize.height
             column = column < (numberOfColumn - 1) ? (column + 1) : 0
         }
+    }
+    
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        var visibleLayoutAttributes: [UICollectionViewLayoutAttributes] = []
+        
+        for attributes in attributesCache {
+            if attributes.frame.intersects(rect) {
+                visibleLayoutAttributes.append(attributes)
+            }
+        }
+        return visibleLayoutAttributes
+    }
+    
+    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        return attributesCache[indexPath.item]
     }
 }

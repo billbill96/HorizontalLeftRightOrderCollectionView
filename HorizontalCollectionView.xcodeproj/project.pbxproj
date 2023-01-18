@@ -13,6 +13,9 @@
 		332CB9DA2976A9620012EAED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332CB9D82976A9620012EAED /* Main.storyboard */; };
 		332CB9DC2976A9680012EAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 332CB9DB2976A9680012EAED /* Assets.xcassets */; };
 		332CB9DF2976A9680012EAED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332CB9DD2976A9680012EAED /* LaunchScreen.storyboard */; };
+		332CB9E72976A9AA0012EAED /* HorizontalCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CB9E62976A9AA0012EAED /* HorizontalCollectionView.swift */; };
+		332CB9EC2976AD220012EAED /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CB9EA2976AD220012EAED /* ContentCollectionViewCell.swift */; };
+		332CB9ED2976AD220012EAED /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332CB9EB2976AD220012EAED /* ContentCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		332CB9DB2976A9680012EAED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		332CB9DE2976A9680012EAED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		332CB9E02976A9680012EAED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		332CB9E62976A9AA0012EAED /* HorizontalCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionView.swift; sourceTree = "<group>"; };
+		332CB9EA2976AD220012EAED /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		332CB9EB2976AD220012EAED /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 		332CB9D12976A9620012EAED /* HorizontalCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				332CB9E92976AB1D0012EAED /* Cell */,
+				332CB9E82976AB160012EAED /* Layout */,
 				332CB9D22976A9620012EAED /* AppDelegate.swift */,
 				332CB9D42976A9620012EAED /* SceneDelegate.swift */,
 				332CB9D62976A9620012EAED /* ViewController.swift */,
@@ -65,6 +73,23 @@
 				332CB9E02976A9680012EAED /* Info.plist */,
 			);
 			path = HorizontalCollectionView;
+			sourceTree = "<group>";
+		};
+		332CB9E82976AB160012EAED /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				332CB9E62976A9AA0012EAED /* HorizontalCollectionView.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		332CB9E92976AB1D0012EAED /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				332CB9EA2976AD220012EAED /* ContentCollectionViewCell.swift */,
+				332CB9EB2976AD220012EAED /* ContentCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				332CB9ED2976AD220012EAED /* ContentCollectionViewCell.xib in Resources */,
 				332CB9DF2976A9680012EAED /* LaunchScreen.storyboard in Resources */,
 				332CB9DC2976A9680012EAED /* Assets.xcassets in Resources */,
 				332CB9DA2976A9620012EAED /* Main.storyboard in Resources */,
@@ -140,7 +166,9 @@
 			files = (
 				332CB9D72976A9620012EAED /* ViewController.swift in Sources */,
 				332CB9D32976A9620012EAED /* AppDelegate.swift in Sources */,
+				332CB9E72976A9AA0012EAED /* HorizontalCollectionView.swift in Sources */,
 				332CB9D52976A9620012EAED /* SceneDelegate.swift in Sources */,
+				332CB9EC2976AD220012EAED /* ContentCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +329,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = billbill.HorizontalCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,6 +359,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = billbill.HorizontalCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
